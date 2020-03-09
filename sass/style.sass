@@ -1,0 +1,234 @@
+@import "normalize.sass"
+
+body 
+    background: #333
+    font-family: 'PT Sans', sans-serif
+    color: #2f1b15
+
+input 
+    border: none
+    background: none
+    background-image: url('../img/line.jpg')
+    background-repeat: repeat-x
+    background-position: bottom left
+    outline: none
+    font-family: 'Courier Prime', monospace
+    font-weight: 400
+.text 
+    font-family: 'Courier Prime', monospace
+    line-height: 1.1666666666666667rem
+    color: #000
+    font-weight: 700
+.text:hover
+    color: #74644A
+
+.title-text 
+    margin: 0 0 0 0
+    font-size: 1.5333333333333334rem
+    line-height: 2.666666666666665rem
+.description-text
+    margin: 0 0 20px 0
+
+.check
+    position: relative
+    &__input 
+        position: absolute
+        appearance: none
+    &__init
+        position: absolute
+        width: 20px
+        height: 18px
+    &__init:before 
+        content: ""
+        display: block
+        position: absolute
+        width: 20px
+        height: 20px
+        top: -4px
+        left: 3px
+        opacity: 0
+        transition: 1s ease all
+    // &__input:checked + &__init
+    &__input:checked + &__init:before
+        opacity: 1
+        transition: 1s ease all
+    &__input:disabled + &__init 
+        background: tomato
+        transition: 1s ease all
+    &__input:focus + &__init 
+        outline: 1px solid #00BFFF
+
+
+
+.container 
+    max-width: 880px
+    width: 100%
+    margin: 0 auto 
+    // border: 1px solid #fff
+
+.wrapper 
+    max-width: 1100px
+    width: 100%
+    // border: 1px solid #fff
+    margin: 0 auto
+    // min-height: 1000px
+    background: url('../img/bgbg.png')
+
+
+header 
+    .container
+        padding: 32px 0 0 0
+    .header-under 
+        display: flex
+        flex-flow: column nowrap
+        &-top 
+            display: flex 
+            flex-flow: row nowrap
+            justify-content: space-between
+            &__left
+                h3 
+                    font-size: 32px
+        &-bottom 
+            h1 
+                text-align: center
+                font-size: 52px
+                text-transform: uppercase
+
+main 
+    // .container 
+    .main-form 
+        &-input 
+            display: flex
+            flex-flow: column nowrap
+            label 
+                width: 100%
+                margin: 0 0 32px 0 
+                display: flex
+                flex-flow: row nowrap
+                // justify-content: space-
+                align-items: center
+                span
+                    padding: 0 10px 0 0
+                    font-weight: 700
+                    line-height: 1.33333333333333rem
+                    font-size: 1.4rem
+                    
+                    flex-shrink: 1
+                input
+                    // font-size: 1.8666666666666667rem
+                    font-size: 30px
+                    padding: 0 0 0 0
+                    // width: 100%1
+                    flex-grow: 1
+                    // line-height: 2.4rem
+                    padding-left: 1rem
+                    margin-left: 1rem
+                    // padding-bottom: 0.4rem
+        &-checkbox
+            margin: 0 0 32px 0
+            &-skills
+                display: flex
+                flex-flow: row wrap
+                .check 
+                    flex-basis: 31%
+                    padding: 10px 0 10px 0
+                    display: flex 
+                    flex-flow: row nowrap 
+                    align-items: center
+                    &__init 
+                        background: url('../img/checkbox.png')
+                    &__init:before 
+                        background: url('../img/check.png') center no-repeat
+                &__label
+                    &__text 
+                        margin: 0 0 0 26px
+                        font-size: 1.1666666666666666rem
+                        line-height: 1.6666666666666667rem
+                        color: #000
+                        font-weight: 700
+                    &__text:hover
+                        color: #74644A
+        &-slider
+
+            &-project 
+                position: relative
+                display: flex
+                flex-flow: column nowrap
+                // align-items: center
+                div 
+                    // border: 1px solid #fff
+                &__pin 
+                    position: absolute
+                    width: 17px
+                    height: 16px
+                    background: url('../img/button-slider.png') no-repeat 
+                    transition: .5s ease all
+                &__pic 
+                    margin: 20px 0 0 0
+                    width: 100%
+                    background: url('../img/slider.png') center center/contain no-repeat
+                    background-size: cover
+                    padding: 0 0 0 0
+                &__text
+                    display: flex
+                    flex-flow: row nowrap
+                    .text 
+                        font-size: 16px
+                    div:nth-child(1)
+                        flex-basis: 19%
+                    div:nth-child(2)
+                        flex-basis: 29.5%
+                    div:nth-child(3)
+                        flex-basis: 51%
+        &-textarea 
+            &__block 
+                width: 100%
+                background: url('../img/textarea-line.png')
+                border: none
+                resize: none
+                overflow: hidden
+                // background-image: url(../../images/textarea-line.png)
+                background-repeat: repeat
+                background-position-x: left
+                background-position-y: top
+                background-color: transparent
+                line-height: 4rem
+                padding-bottom: 0.4666666666666667rem
+                font-weight: 100
+                font-size: 1.8666666666666667rem
+                outline: none
+        &-radio 
+            padding: 20px 0 20px 0
+            &__block 
+                display: flex
+                .check
+                    display: flex
+                    // flex-flow: row wrap 
+                    align-items: center
+                    margin: 0 20px 0 0
+                    &__init 
+                        width: 29px
+                        height: 28px
+                        background: url('../img/radiobutton.png')
+                    &__init:before 
+                        background: url('../img/check-radiobutton.png') no-repeat
+                        background-size: cover
+                        top: 3px
+                        left: 4px
+                    &__text 
+                        font-size: 17px
+                        margin: 0 0 0 32px
+        &-data 
+            margin: 20px 0 0 0
+            display: flex
+            flex-flow: row wrap 
+            h2 
+                margin: 0 26px 0 0
+            input
+                font-size: 22px
+
+footer 
+    padding: 20px 0 20px 0
+    .container 
+        div 
+            text-align: center
